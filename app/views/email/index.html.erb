@@ -10,9 +10,9 @@
     <div id="cell-name"><p>Emails sélectionnés</p></div>
     <div id="email-list">
       <% @emails.each do |email|%>
-        <p>- <%= email.object %></p>
+        <%= render partial: "email_object", locals: { email: email} %>
       <% end %>
     </div>
-    <div></div>
+    <div id="email-div"></div>
   </div>
 </div>
