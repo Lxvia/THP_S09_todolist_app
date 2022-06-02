@@ -17,7 +17,8 @@ require 'faker'
 #    my_task.save
 #  end
 #end
+Email.delete_all 
 
-5.times do 
+10.times do 
   Email.create(object: Faker::Games::Overwatch.quote, body: Faker::Lorem.sentence(word_count: 10))
 end

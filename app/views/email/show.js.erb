@@ -1,1 +1,4 @@
-document.getElementById("email-div").insertAdjacentHTML("beforeend", "<%= j render 'show' %>");
+document.getElementById("email-div").innerHTML = "<%= j render 'show' %>";
+
+let link = document.getElementById('<%= @email.id %>');
+link.style.color = 'grey';
