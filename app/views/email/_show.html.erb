@@ -2,7 +2,7 @@
     <h4 class="text-center mt-5">Object : <%= @email.object %></h4>
     <p class="text-center"><%= @email.body %></p>
     <div class="d-flex justify-content-around">
-        <%= button_to "Supprimer", class: "btn btn-danger" %>
-        <%= button_to "Marquer comme lu", class: "btn btn-danger" %>
+        <%= button_to "Supprimer", @email, class: "btn btn-danger", method: :delete, remote: true %>
+        <%= button_to "Marquer comme lu", @email, class: "btn btn-success", method: :delete, data:{confirm: "Supprimer le mail?"} %>
     </div>
 </div>

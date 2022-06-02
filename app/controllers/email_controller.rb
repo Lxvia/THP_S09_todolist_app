@@ -30,8 +30,9 @@ class EmailController < ApplicationController
         @email.destroy
 
         respond_to do |format|
-            format.html { redirect_to root_path }
+            #format.html { redirect_to root_path }
             format.js {}
+            flash[:notice] = "Mail supprimé"
         end
     end
 end
