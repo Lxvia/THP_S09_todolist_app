@@ -5,3 +5,43 @@
 @import "font-awesome";
 @import "components/*";
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+// EMAIL GRID
+
+.section-email {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#grid > div {
+    border: solid 1px #999;
+    background-color: #ccc;
+}
+
+#grid {
+    width: 60%;
+    margin-bottom: 10em;
+    margin-left: 1em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px 1fr;
+
+}
+
+#cell-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#cell-name p {
+    margin-top: 10px;
+}
+
+// EMAIL GRID END

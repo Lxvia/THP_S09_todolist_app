@@ -8,11 +8,18 @@ before_action :authenticate_user!
     @task = Task.new(task_params)
     @category = Category.find(category_params)
     @task.category = @category
+    
     if @task.save
-      redirect_to root_path
+      respond_to do |format|
+        format.html {redirect_to root_path}
+        format.js {}
+      end
       flash[:notice] = "Task created"
     else
-      redirect_to root_path
+      respond_to do |format|
+        format.html {redirect_to root_path}
+        format.js {}
+      end
       flash[:notice] = "Please try again"
     end
   end
@@ -44,7 +51,7 @@ before_action :authenticate_user!
   private
 
   def task_params
-    params.permit(:title, :deadline, :description)
+    params.permit(:title, :deadline, :description, :id, :status)
   end
 
   def category_params
